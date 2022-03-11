@@ -24,6 +24,13 @@ export default {
       skills,
       portofolios
     }
+  },
+  mounted () {
+    // change the title
+    setInterval(() => {
+      const emoticons = ['😜', '🧐', '🥺', '😘', '🥳', '🤣', '😁', '🥰', '🥱']
+      document.title = emoticons[Math.floor(Math.random() * emoticons.length)] + ' @caktoy Personal Website'
+    }, 3000)
   }
 }
 </script>

@@ -60,6 +60,16 @@
       <h1 class="text-lg mb-2 font-semibold border-b-2 border-black">
         Social Media
       </h1>
+      <div v-if="myGithub !== null">
+        <div class="font-semibold">
+          GitHub:
+        </div>
+        <div class="text-sm">
+          <a :href="`http://` + myGithub" target="__blank" class="hover:text-red-700 hover:underline transition duration-200">
+            {{ myGithub }}
+          </a>
+        </div>
+      </div>
       <div v-if="myFacebook !== null">
         <div class="font-semibold">
           Facebok:
@@ -80,16 +90,6 @@
           </a>
         </div>
       </div>
-      <div v-if="myGithub !== null">
-        <div class="font-semibold">
-          GitHub:
-        </div>
-        <div class="text-sm">
-          <a :href="`http://` + myGithub" target="__blank" class="hover:text-red-700 hover:underline transition duration-200">
-            {{ myGithub }}
-          </a>
-        </div>
-      </div>
       <div v-if="myTwitter !== null">
         <div class="font-semibold">
           Twitter:
@@ -97,6 +97,16 @@
         <div class="text-sm">
           <a :href="`http://` + myTwitter" target="__blank" class="hover:text-red-700 hover:underline transition duration-200">
             {{ myTwitter }}
+          </a>
+        </div>
+      </div>
+      <div v-if="myLinkedIn !== null">
+        <div class="font-semibold">
+          LinkedIn:
+        </div>
+        <div class="text-sm">
+          <a :href="`http://` + myLinkedIn" target="__blank" class="hover:text-red-700 hover:underline transition duration-200">
+            {{ myLinkedIn }}
           </a>
         </div>
       </div>
@@ -121,7 +131,8 @@ export default {
       myFacebook: MyProfile.socialMedia.facebook ?? null,
       myInstagram: MyProfile.socialMedia.instagram ?? null,
       myGithub: MyProfile.socialMedia.github ?? null,
-      myTwitter: MyProfile.socialMedia.twitter ?? null
+      myTwitter: MyProfile.socialMedia.twitter ?? null,
+      myLinkedIn: MyProfile.socialMedia.linkedin ?? null
     }
   }
 }

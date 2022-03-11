@@ -1,8 +1,8 @@
 export default {
   fullname: 'Thony Hermawan',
   title: 'Software Developer',
-  photo: 'https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/s960x960/46501862_10217482161866690_9074718747679260672_o.jpg?_nc_cat=101&_nc_sid=85a577&_nc_oc=AQnnLud69IR_imBlSzDZjCxhKXz2zhNfC2XLfP1Pd_7EcLPPekA2Rwb4-d7RfrfgdoI&_nc_ht=scontent-sin6-1.xx&_nc_tp=7&oh=2eb59ead99c346dcf3c35542d392907c&oe=5E9BD0A3',
-  description: 'I have experience in software development for more than 4 years. I can deliver client requirements as they need as soon as possible. I will be responsible with what I have to do.',
+  photo: 'photo.png',
+  description: 'I have experience in software development for more than 5+ years in any environment such as web, mobile, and desktop. Latest technologies I have been working with are React, NodeJS, and MongoDB. I am a self-taught developer with a passion for learning new technologies and solving problems.',
   contact: {
     email: 'thony.her@gmail.com',
     mobile: 'Please contact me by email first',
@@ -10,6 +10,7 @@ export default {
     home: 'Pasuruan, Indonesia'
   },
   socialMedia: {
+    linkedin: 'linkedin.com/in/thonyh',
     facebook: 'facebook.com/thony.caktoy',
     instagram: 'instagram.com/caktoyy',
     twitter: 'twitter.com/caktoy',
@@ -17,12 +18,22 @@ export default {
   },
   experiences: [
     {
+      company: 'Avia Avian Tbk. (PT)',
+      website: 'https://avianbrands.com/',
+      title: 'Software Engineer',
+      period: {
+        start: 'May 2020',
+        end: 'Now'
+      },
+      description: 'Develop and handle in-house software projects.'
+    },
+    {
       company: 'Santinilestari Energi Indonesia, PT',
       website: 'https://www.sei-lighting.co.id/',
-      title: 'Programmer',
+      title: 'Software Programmer',
       period: {
         start: 'Nov 2019',
-        end: 'Now'
+        end: 'May 2020'
       },
       description: 'Build IoT application to support company products.'
     },
@@ -82,7 +93,7 @@ export default {
   skills: [
     {
       name: 'PHP (Native/Laravel/CI)',
-      percentage: 80
+      percentage: 90
     },
     {
       name: 'C# (.NET & .NET Core)',
@@ -94,14 +105,18 @@ export default {
     },
     {
       name: 'Flutter',
-      percentage: 75
+      percentage: 80
     },
     {
       name: 'ReactJS & ReactNative',
-      percentage: 70
+      percentage: 75
     },
     {
-      name: 'VueJS',
+      name: 'VueJS 2',
+      percentage: 75
+    },
+    {
+      name: 'VueJS 3',
       percentage: 60
     },
     {
@@ -110,7 +125,7 @@ export default {
     },
     {
       name: 'MongoDB',
-      percentage: 70
+      percentage: 60
     },
     {
       name: 'NodeJS',
@@ -125,9 +140,16 @@ export default {
       percentage: 50
     },
     {
-      name: 'Linux',
-      percentage: 80
+      name: 'Linux Server Management',
+      percentage: 70
     }
   ],
-  portofolios: []
+  portofolios: [
+    {
+      title: 'Quran ID',
+      description: 'Quran mobile android application with Indonesian translation.',
+      date: 'Jan 2021',
+      website: 'https://play.google.com/store/apps/details?id=io.github.caktoy.QuranID'
+    }
+  ]
 }
