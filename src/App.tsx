@@ -183,7 +183,7 @@ function BackdropGlyphs() {
   )
 }
 
-function CodeCard({ lang }: { lang: Lang }) {
+function CodeCard() {
   const lines: React.ReactNode[] = [
     <>
       <i className="k">const</i> <i className="v">thony</i> = {'{'}
@@ -204,7 +204,10 @@ function CodeCard({ lang }: { lang: Lang }) {
       {'  '}mentors: <i className="n">true</i>,
     </>,
     <>
-      {'  '}openTo: <i className="s">"{ui.openTo[lang]}"</i>,
+      {'  '}exploring: <i className="s">"AI"</i>,
+    </>,
+    <>
+      {'  '}openTo: <i className="s">"{ui.openTo.en}"</i>,
     </>,
     <>{'};'}</>,
   ]
@@ -302,7 +305,7 @@ function Hero({ lang }: { lang: Lang }) {
         </div>
       </div>
       <div className="hero-side">
-        <CodeCard lang={lang} />
+        <CodeCard />
       </div>
       <dl className="status">
         <div>

@@ -68,8 +68,8 @@ export const summary = (years: number): L[] => [
     en: `Software engineer with over ${years} years of professional experience delivering web, desktop, and mobile applications end to end. Proficient in system architecture, backend and frontend development, API integration, performance optimization, and production problem solving.`,
   },
   {
-    id: 'Berfokus pada solusi yang scalable, andal, dan mendukung efisiensi proses bisnis. Berpengalaman dalam team building dan manajemen tim pengembang, mulai dari memimpin tim dan berkoordinasi dengan stakeholder hingga menjaga standar kualitas dan kepatuhan ISO 27001.',
-    en: 'Focused on solutions that are scalable, reliable, and that improve business process efficiency. Experienced in team building and development team management, from leading teams and coordinating with stakeholders to upholding quality standards and ISO 27001 compliance.',
+    id: 'Berfokus pada solusi yang scalable, andal, dan mendukung efisiensi proses bisnis. Berpengalaman dalam team building dan manajemen tim pengembang, mulai dari memimpin tim dan berkoordinasi dengan stakeholder hingga menjaga standar kualitas dan kepatuhan ISO 27001. Saat ini sedang banyak menggali potensi dan kesempatan dalam pemanfaatan teknologi AI untuk menunjang pekerjaan dan produktivitas.',
+    en: 'Focused on solutions that are scalable, reliable, and that improve business process efficiency. Experienced in team building and development team management, from leading teams and coordinating with stakeholders to upholding quality standards and ISO 27001 compliance. Currently exploring the potential and opportunities of AI technology to support work and productivity.',
   },
 ]
 
