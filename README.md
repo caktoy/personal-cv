@@ -1,22 +1,22 @@
-# caktoy.github.io
+# caktoy-cv
 
-> My GitHub Page
+CV / personal site for Thony Hermawan. React + Vite + TypeScript, built to a static site.
 
-## Build Setup
+## Develop
 
 ```bash
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
+npm install
+npm run dev
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## Build and deploy
+
+```bash
+npm run build
+```
+
+Copy the contents of `dist/` (not the folder itself) into the root of the `caktoy.github.io` repo, replacing the old files, then commit and push. The build uses a relative base, so it works at the repo root.
+
+## Edit content
+
+All CV text (ID and EN) lives in `src/data/cv.ts`. Styling is in `src/styles.css`.
