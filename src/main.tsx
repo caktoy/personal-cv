@@ -12,6 +12,7 @@ console.log(
   'font:12px monospace',
 )
 
+// The build ships prerendered HTML for crawlers; the client mounts over it.
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <App />

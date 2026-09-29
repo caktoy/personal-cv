@@ -27,10 +27,11 @@ const duration = (months: number, lang: Lang) => {
   return parts.join(' ') || `1 ${ui.mos[lang]}`
 }
 
-const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches
+const isBrowser = typeof window !== 'undefined'
+const reducedMotion = () => isBrowser && window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
 function useLang(): [Lang, (l: Lang) => void] {
-  const [lang, setLang] = useState<Lang>(() => (document.documentElement.lang === 'en' ? 'en' : 'id'))
+  const [lang, setLang] = useState<Lang>(() => (isBrowser && document.documentElement.lang === 'en' ? 'en' : 'id'))
   useEffect(() => {
     document.documentElement.lang = lang
     try {
@@ -43,6 +44,7 @@ function useLang(): [Lang, (l: Lang) => void] {
 function useTheme(): [boolean, () => void] {
   const query = '(prefers-color-scheme: dark)'
   const read = () => {
+    if (!isBrowser) return false
     const t = document.documentElement.dataset.theme
     return t ? t === 'dark' : window.matchMedia(query).matches
   }
@@ -120,8 +122,8 @@ const jump = (id: string) => (e: React.MouseEvent) => {
 // Types out the role headline, deletes it, then moves on to the next one.
 function TypedRole({ label }: { label: string }) {
   const words = profile.typedRoles
-  const [text, setText] = useState(reducedMotion() ? words[0] : '')
-  const st = useRef({ i: 0, n: 0, del: false })
+  const [text, setText] = useState(words[0])
+  const st = useRef({ i: 0, n: words[0].length, del: true })
   useEffect(() => {
     if (reducedMotion()) return
     let t: number
@@ -146,7 +148,7 @@ function TypedRole({ label }: { label: string }) {
       setText(word.slice(0, s.n))
       t = window.setTimeout(tick, delay)
     }
-    t = window.setTimeout(tick, 600)
+    t = window.setTimeout(tick, 2200)
     return () => clearTimeout(t)
   }, [words])
   return (
